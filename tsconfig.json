@@ -5,6 +5,8 @@
     "moduleResolution": "node",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "target": "es2017",
     "outDir": "lib"
@@ -16,5 +18,6 @@
     ".webpack/**/*",
     "_warmup/**/*",
     ".vscode/**/*"
-  ]
+  ],
+  "files": ["typings/typings.d.ts"]
 }
