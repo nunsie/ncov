@@ -1,0 +1,28 @@
+scalar DateTime
+
+type Query {
+  stats: Stats
+  countries: [Country]
+  country(code: ID!): Country
+}
+
+type Stats {
+  updated: DateTime
+  cases: Int
+  deaths: Int
+  recoveries: Int
+  active: Int
+  closed: Int
+}
+
+type Country {
+  code: ID
+  name: String
+  totalCases: Int
+  newCases: Int
+  totalDeaths: Int
+  newDeaths: Int
+  totalRecovered: Int
+  activeCases: Int
+  critical: Int
+}

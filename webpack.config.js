@@ -38,6 +38,17 @@ module.exports = {
           experimentalWatchApi: true,
         },
       },
+      {
+        test: /\.(graphql?)$/,
+        loader: "graphql-import-loader",
+        exclude: [
+          [
+            path.resolve(__dirname, 'node_modules'),
+            path.resolve(__dirname, '.serverless'),
+            path.resolve(__dirname, '.webpack'),
+          ],
+        ],
+      }
     ],
   },
   plugins: [

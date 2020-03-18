@@ -12,9 +12,11 @@ custom:
 # Add the serverless-webpack plugin
 plugins:
   - serverless-webpack
+  - serverless-offline
 
 provider:
   name: aws
+  region: eu-west-1
   runtime: nodejs12.x
   apiGateway:
     minimumCompressionSize: 1024 # Enable gzip compression for responses > 1 KB
@@ -22,9 +24,18 @@ provider:
     AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
 
 functions:
-  hello:
-    handler: handler.hello
+  graphql:
+    handler: src/index.server
     events:
       - http:
+          path: /
+          method: post
+          cors: true
+    timeout: 30
+  playground:
+    handler: src/index.playground
+    events:
+      - http:
+          path: /
           method: get
-          path: hello
+          cors: true
