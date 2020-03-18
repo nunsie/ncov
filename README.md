@@ -7,7 +7,7 @@
 <div align="center"><strong>🚀 COVID-19 meets GraphQL</strong></div>
 <div align="center">A GraphQL Server on top of the coronavirus data provided by <a href="https://www.worldometers.info/coronavirus/">worldometers.info</a></div>
 
-## Playground 👉 [ncov.co.za/graphql](https://ncov.co.za/graphql)
+## Playground 👉 [api.ncov.co.za](https://api.ncov.co.za)
 
 ## Features
 
